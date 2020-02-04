@@ -7,7 +7,7 @@ const Styled = styled.header`
 
     & > header {
         height: 100px;
-        background-color: green;
+        background-color: white;
     }
 
     & > div {
@@ -76,13 +76,41 @@ const Styled = styled.header`
         width: 100%;
         height: 100%;
         color: white;
-        font-weight: bold;
         top: 0;
         left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 4rem;
+    }
+
+    & > div > div > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    & > div > div > div > a {
+        padding: 1rem;
+        clip-path: polygon(
+            10px 0, 100% 0,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            0 100% ,0 10px
+        );
+        background-color: #41cd52;
+    }
+
+    & > div > div > div > a + a {
+        background-color: red;
+    }
+    
+    & > div > div > div > a + a {
+        margin-left: 1rem;
+    }
+
+    & > div > div > div >  div + div {
+        margin-left: 2rem;
     }
 `
 
@@ -100,6 +128,31 @@ const FrontPage = () => {
                 <div>
                     <h1>One framework. One codebase. Any platform.</h1>
                     <p>Everything you need for your entire software development life cycle. Qt is the fastest and smartest way to produce industry-leading software that users love.</p>
+                    <div>
+                        <a><span>Give Qt a try</span></a>
+                        <a><span>Get the full picture</span></a>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h6>DESIGN</h6>
+                            <h3>Create beautiful interfaces</h3>
+                            <a>Designing and prototyping with Qt</a>
+                        </div>
+                        <div>
+                            <h6>DEVELOP</h6>
+                            <h3>Code using powerful tools</h3>
+                            <a>Coding and testing with Qt</a>
+                        </div>
+                        <div>
+                            <h6>DEPLOY</h6>
+                            <h3>Build for all platforms </h3>
+                            <a>Deploying and maintaining with Qt</a>
+                        </div>
+
+                    </div>
+                    
+                    
                 </div>
 
             </div>
